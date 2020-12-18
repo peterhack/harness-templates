@@ -1,0 +1,14 @@
+harnessApiVersion: '1.0'
+type: HTTP
+assertion: json.select("state", ${httpResponseBody}) == "CREATED"
+body: '{ "name": "modify_profile_information_b", "configuration": { "pool": "default",
+  "buildNumber": "2.0.0.1", "browserTypes": [ "FIRE_FOX" ], "videoCaption": true,
+  "delay": 10, "rotations": 1, "runtimeSpeed": 1000, "callbackArgs": null, "dataSetSelection":
+  [ { "testCaseName": "modify_profile_information_b", "templateName": "subject7_ref_app_target_info_reserved_keyword_renamed",
+  "dataSetNames": [ "subject7_remote_reserved_keyword_renamed" ] } ], "projectName":
+  "Common" } }'
+header: 'Authorization: Basic ${secrets.getValue("subject7-token")}, Content-Type:
+  application/json'
+method: POST
+timeoutMillis: 30000
+url: https://platform.subject-7.com/api/v2/executions

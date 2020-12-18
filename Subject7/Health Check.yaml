@@ -1,0 +1,12 @@
+harnessApiVersion: '1.0'
+type: HTTP
+assertion: ${httpResponseCode}==${ResponseCode}
+header: 'Authorization: Basic ${secrets.getValue("subject7-token")}, content-type:
+  application/json'
+method: GET
+timeoutMillis: 0
+url: https://platform.subject-7.com/api/v2/health-check
+variables:
+- description: Response code to verify status
+  name: ResponseCode
+  value: '204'

@@ -1,0 +1,7 @@
+harnessApiVersion: '1.0'
+type: HTTP
+header: 'Authorization: Basic ${secrets.getValue("subject7-token")}, Content-Type:
+  application/json'
+method: GET
+timeoutMillis: 30000
+url: 'https://platform.subject-7.com/api/v2/executions/${context.cloud_run.id}/test-groups '

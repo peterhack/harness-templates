@@ -1,0 +1,6 @@
+harnessApiVersion: '1.0'
+type: HTTP
+header: 'Authorization: Basic Ym9ybGVkZ2U6Y2hhbmdlbGF0ZXI3MQ==, Content-Type: application/json'
+method: GET
+timeoutMillis: 30000
+url: 'https://platform.subject-7.com/api/v2/executions/803/test-groups '
